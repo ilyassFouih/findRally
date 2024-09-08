@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@common/DTOs": ["libs/common/DTOs/src/index.ts"],
+      "@common/utils": ["libs/common/utils/src/index.ts"],
+      "@server/utils": ["libs/server/serverUtils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

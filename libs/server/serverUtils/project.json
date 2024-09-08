@@ -1,0 +1,26 @@
+{
+  "name": "serverUtils",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/server/serverUtils/src",
+  "projectType": "library",
+  "tags": ["server", "server-utils"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/server/serverUtils",
+        "main": "libs/server/serverUtils/src/index.ts",
+        "tsConfig": "libs/server/serverUtils/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/server/serverUtils/jest.config.ts"
+      }
+    }
+  }
+}
